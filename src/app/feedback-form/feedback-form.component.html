@@ -1,3 +1,116 @@
-<p>
-  feedback-form works!
-</p>
+<form novalidate [formGroup]="feedbackForm">
+  <section class="customer-name">
+    <h1>Full Name</h1>
+    <input type="text" placeholder="Enter your name here">
+  </section>
+  <section class="gender">
+    <h1>Gender</h1>
+    <ul>
+      <li>
+        <input id="genderMale" type="radio" name="gender">
+        <label for="genderMale">Male</label>
+      </li>
+      <li>
+        <input id="genderFemale" type="radio" name="gender">
+        <label for="genderFemale">Female</label>
+      </li>
+    </ul>
+  </section>
+  <section class="product-purchased">
+    <h1>Product purchased</h1>
+    <label>I own a:</label>
+    <select>
+      <option value=""></option>
+      <option value="Refrigerator">Refrigerator</option>
+      <option value="Washing Machine">Washing Machine</option>
+      <option value="Telivision">Telivision</option>
+    </select>
+  </section>
+  <section class="detailed-feedback">
+    <h1>Detailed Feedback</h1>
+    <section>
+      <h1>Product quality</h1>
+      <ul>
+        <li>
+          <input id="productQualityAwesome" type="radio" name="product-quality">
+          <label for="productQualityAwesome">Awesome</label>
+        </li>
+        <li>
+          <input id="productQualityGood" type="radio" name="product-quality">
+          <label for="productQualityGood">Good</label>
+        </li>
+        <li>
+          <input id="productQualityWorst" type="radio" name="product-quality">
+          <label for="productQualityWorst">Worst</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Delivery</h1>
+      <ul>
+        <li>
+          <input id="delOnTime" type="checkbox">
+          <label for="delOnTime">On time?</label>
+        </li>
+        <li>
+          <input id="damagedProduct" type="checkbox">
+          <label for="damagedProduct">Damaged product?</label>
+        </li>
+        <li>
+          <input id="extraCharge" type="checkbox">
+          <label for="extraCharge">Extra charge?</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Installation</h1>
+      <ul>
+        <li>
+          <input id="properInstallation" type="checkbox">
+          <label for="properInstallation">Proper installation?</label>
+        </li>
+        <li>
+          <input id="easyUserManual" type="checkbox">
+          <label for="easyUserManual">Easy user manual?</label>
+        </li>
+        <li>
+          <input id="properTraining" type="checkbox">
+          <label for="properTraining">Proper training?</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Maintenance</h1>
+      <ul>
+        <li>
+          <input id="cheeseProvolone" type="checkbox">
+          <label for="cheeseProvolone">Periodic Maintenance?</label>
+        </li>
+        <li>
+          <input id="cheeseCheddar" type="checkbox">
+          <label for="cheeseCheddar">Issues Fixed?</label>
+        </li>
+        <li>
+          <input id="cheeseSwiss" type="checkbox">
+          <label for="cheeseSwiss">Frequent issues?</label>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section class="custom-feedback">
+    <h1>More feedback?</h1>
+    <ul>
+      <li>
+        <input type="text">
+        <button type="button" title="Remove Feedback">Remove</button>
+      </li>
+    </ul>
+    <button type="button">Add a Feedback</button>
+  </section>
+  <section>
+    <h1>Any Suggestions?</h1>
+    <textarea></textarea>
+  </section>
+  <button type="submit">Submit Feedback</button>
+  <button type="button">Reset</button>
+</form>

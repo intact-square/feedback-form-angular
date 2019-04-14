@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'model-driven-forms';
+  title = 'Customer Feedback Form';
+  subtitle = 'With Reactive Forms in Angular 7 (BG WEB AGENCY)';
 }
