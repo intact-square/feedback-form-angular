@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback-form',
@@ -19,7 +19,12 @@ export class FeedbackFormComponent implements OnInit {
   }
 
   buildFeedbackForm() {
-    this.feedbackForm = this.formBuilder.group({}); // Form Builder uses a group of form controls to create a Form Group
+    this.feedbackForm = this.formBuilder.group({
+      // customerName: new FormControl() // arguments: val, validator
+      customerName: this.formBuilder.control(null), // same as above but expects null by default
+      productPurchased: this.formBuilder.control(null),
+      suggestions: this.formBuilder.control(null)
+    }); // Form Builder uses a group of form controls to create a Form Group
   }
 
 }

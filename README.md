@@ -19,3 +19,10 @@ feedback-form.component.ts
 import { FormGroup } from '@angular/forms'; Form group represents the entire form that we are going to build.
 
 FormBuilder is used to build the form. import { FormGroup } from '@angular/forms';
+
+## 4. HTML and CSS
+styles.css, feedback-form.component and app.component
+
+## 5. Creating FormControl elements
+FormGroup represents the entire form. And the individual form elements will be represented by FormControl. Thus, FormControl is the building block of a FormGroup.
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
