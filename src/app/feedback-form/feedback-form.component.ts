@@ -23,7 +23,10 @@ export class FeedbackFormComponent implements OnInit {
       // customerName: new FormControl() // arguments: val, validator
       customerName: this.formBuilder.control(null), // same as above but expects null by default
       productPurchased: this.formBuilder.control(null),
-      suggestions: this.formBuilder.control(null)
+      suggestions: this.formBuilder.control(null),
+      delivery: this.formBuilder.group({}),
+      installation: this.formBuilder.group({}),
+      maintenance: this.formBuilder.group({})
     }); // Form Builder uses a group of form controls to create a Form Group
   }
 
