@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-feedback-form',
@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 export class FeedbackFormComponent implements OnInit {
 
   feedbackForm: FormGroup; // Declaring a variable of type FormGroup
+  morefeedbacksControls: FormArray;
 
   constructor(private formBuilder: FormBuilder) { 
     this.buildFeedbackForm();
@@ -19,6 +20,7 @@ export class FeedbackFormComponent implements OnInit {
   }
 
   buildFeedbackForm() {
+    // Building the Feedback Form Group
     this.feedbackForm = this.formBuilder.group({
       // customerName: new FormControl() // arguments: val, validator
       customerName: this.formBuilder.control(null), // same as above but expects null by default
@@ -40,8 +42,14 @@ export class FeedbackFormComponent implements OnInit {
         frequentIssues: this.formBuilder.control(null)
       }), // Nested Form Group
       gender: this.formBuilder.control(null),
-      productQuality: this.formBuilder.control(null)
+      productQuality: this.formBuilder.control(null), // Radio buttons - formcontrol
+      morefeedbacks: this.formBuilder.array([
+        this.formBuilder.control(null)
+      ]) // Form array for dynamic form elements
     }); // Form Builder uses a group of form controls to create a Form Group
+
+    // Building the FormArray Control
+    this.morefeedbacksControls = this.feedbackForm.get('morefeedbacks') as FormArray;
   }
 
 }

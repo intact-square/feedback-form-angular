@@ -112,7 +112,7 @@
     display: inline-block;
     vertical-align: middle;
   }
-  .custom-feedback input[type=text] {
+  .more-feedbacks input[type=text] {
     width: 50%;
     margin-bottom: 15px;
     margin-right: 10px

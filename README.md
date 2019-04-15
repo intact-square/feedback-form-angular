@@ -35,3 +35,5 @@ Creating form groups inside form groups for holding similar form control element
 ## 8. Creating Form Controls for radio buttons
 Radio buttons is just a single input. Thus we are not having a different form group for this. While checkbox has multiple inputs with multiple values, so having a form group to wrap them around.
 
+## 9. Creating Form Array for dynamic elements
+A Form Array is also like Form Group and can be used to create multiple form control elements. This is unique in the way that we can create/add/delete form control elements inside it.
