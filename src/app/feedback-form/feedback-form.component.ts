@@ -25,9 +25,11 @@ export class FeedbackFormComponent implements OnInit {
       // customerName: new FormControl() // arguments: val, validator
       customerName: this.formBuilder.control(null), // same as above but expects null by default
       productPurchased: this.formBuilder.control(null),
+      // productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
       suggestions: this.formBuilder.control(null),
       delivery: this.formBuilder.group({
         delOnTime: this.formBuilder.control(null),
+        // delOnTime: this.formBuilder.control(true), // default value setting
         damagedProduct: this.formBuilder.control(null),
         extraCharge: this.formBuilder.control(null)
       }),
@@ -42,6 +44,7 @@ export class FeedbackFormComponent implements OnInit {
         frequentIssues: this.formBuilder.control(null)
       }), // Nested Form Group
       gender: this.formBuilder.control(null),
+      // gender: this.formBuilder.control('Male'), // default value setting
       productQuality: this.formBuilder.control(null), // Radio buttons - formcontrol
       morefeedbacks: this.formBuilder.array([
         this.formBuilder.control(null)
