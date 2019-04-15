@@ -52,4 +52,12 @@ export class FeedbackFormComponent implements OnInit {
     this.morefeedbacksControls = this.feedbackForm.get('morefeedbacks') as FormArray;
   }
 
+  addMoreFeedback() {
+    this.morefeedbacksControls.push(this.formBuilder.control(null));
+  }
+
+  deleteMoreFeedback(index) {
+    this.morefeedbacksControls.removeAt(index);
+  }
+
 }

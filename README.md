@@ -37,3 +37,6 @@ Radio buttons is just a single input. Thus we are not having a different form gr
 
 ## 9. Creating Form Array for dynamic elements
 A Form Array is also like Form Group and can be used to create multiple form control elements. This is unique in the way that we can create/add/delete form control elements inside it.
+
+## 10. Creating Add/Delete functions
+
