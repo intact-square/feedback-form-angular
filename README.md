@@ -31,3 +31,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 Creating form groups inside form groups for holding similar form control elements e.g a group of checkboxes
 
 ## 7. Creating Form Controls inside nested form groups
+
+## 8. Creating Form Controls for radio buttons
+Radio buttons is just a single input. Thus we are not having a different form group for this. While checkbox has multiple inputs with multiple values, so having a form group to wrap them around.
+

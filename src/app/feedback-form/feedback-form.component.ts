@@ -38,7 +38,9 @@ export class FeedbackFormComponent implements OnInit {
         periodicMaintenance: this.formBuilder.control(null),
         issuesFixed: this.formBuilder.control(null),
         frequentIssues: this.formBuilder.control(null)
-      }) // Nested Form Group
+      }), // Nested Form Group
+      gender: this.formBuilder.control(null),
+      productQuality: this.formBuilder.control(null)
     }); // Form Builder uses a group of form controls to create a Form Group
   }
 
