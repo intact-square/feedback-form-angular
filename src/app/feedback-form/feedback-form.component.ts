@@ -65,4 +65,11 @@ export class FeedbackFormComponent implements OnInit {
     this.morefeedbacksControls.removeAt(index);
   }
 
+  clearForm() {
+    /*this.feedbackForm.reset({
+      customerName: 'Kiran Kumar Dash' // Default name on clearing out form
+    });*/
+    this.feedbackForm.reset(); // Resets the formgroup
+  }
+
 }
