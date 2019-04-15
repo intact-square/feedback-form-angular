@@ -50,3 +50,6 @@ Any form group or form control or form array can be cleared with reset()
 
 ## 14. Showing form data on HTML
 json pipe used to view HTML data for easier coding
+
+## 15. Submit Feedback Form
+(ngSubmit)

@@ -72,4 +72,8 @@ export class FeedbackFormComponent implements OnInit {
     this.feedbackForm.reset(); // Resets the formgroup
   }
 
+  submitFeedbackForm() {
+    console.log(this.feedbackForm.value);
+  }
+
 }

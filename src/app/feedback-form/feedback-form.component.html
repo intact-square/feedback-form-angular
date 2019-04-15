@@ -1,4 +1,4 @@
-<form novalidate [formGroup]="feedbackForm">
+<form novalidate [formGroup]="feedbackForm" (ngSubmit)="submitFeedbackForm()">
   <section class="customer-name">
     <h1>Full Name</h1>
     <input type="text" placeholder="Enter your name here">
@@ -112,7 +112,7 @@
     <textarea></textarea>
   </section>
   <button type="submit">Submit Feedback</button>
-  <button type="button">Clear Form</button>
+  <button type="button" (click)="clearForm()">Clear Form</button>
 </form>
 
 <!-- Form Data -->
