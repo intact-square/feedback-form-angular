@@ -16,7 +16,9 @@ export class FeedbackFormComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    // Set default values in form only after ng on init
+    // let customerNameControl = this.feedbackForm.get('customerName') as FormControl;
+    // customerNameControl.setValue('Kiran Kumar Dash', {emitEvent: true}); // value and trigger change event
   }
 
   buildFeedbackForm() {

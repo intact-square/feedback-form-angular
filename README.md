@@ -42,3 +42,5 @@ A Form Array is also like Form Group and can be used to create multiple form con
 
 ## 11. Pre filling data in form
 In HTML we use "value" attribute. Thus giving the same data from value of an input into form control will set it as default selection.
+
+## 12. Pre filling data in form with setValue in ngOnInit
