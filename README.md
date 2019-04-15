@@ -30,3 +30,4 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 ## 6. Creating nested form groups
 Creating form groups inside form groups for holding similar form control elements e.g a group of checkboxes
 
+## 7. Creating Form Controls inside nested form groups

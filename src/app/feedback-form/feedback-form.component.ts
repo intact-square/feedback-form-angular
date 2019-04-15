@@ -24,9 +24,21 @@ export class FeedbackFormComponent implements OnInit {
       customerName: this.formBuilder.control(null), // same as above but expects null by default
       productPurchased: this.formBuilder.control(null),
       suggestions: this.formBuilder.control(null),
-      delivery: this.formBuilder.group({}),
-      installation: this.formBuilder.group({}),
-      maintenance: this.formBuilder.group({})
+      delivery: this.formBuilder.group({
+        delOnTime: this.formBuilder.control(null),
+        damagedProduct: this.formBuilder.control(null),
+        extraCharge: this.formBuilder.control(null)
+      }),
+      installation: this.formBuilder.group({
+        properInstallation: this.formBuilder.control(null),
+        easyUserManual: this.formBuilder.control(null),
+        properTraining: this.formBuilder.control(null)
+      }),
+      maintenance: this.formBuilder.group({
+        periodicMaintenance: this.formBuilder.control(null),
+        issuesFixed: this.formBuilder.control(null),
+        frequentIssues: this.formBuilder.control(null)
+      }) // Nested Form Group
     }); // Form Builder uses a group of form controls to create a Form Group
   }
 
