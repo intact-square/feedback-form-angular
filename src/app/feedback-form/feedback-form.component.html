@@ -26,7 +26,7 @@
       <option [ngValue]="tvItem">Telivision</option>
     </select>
   </section>
-  <section class="detailed-feedback">
+  <section class="detailed-feedback" *ngIf="feedbackForm.get('gender').value!='Male'">
     <h1>Detailed Feedback</h1>
     <section>
       <h1>Product quality</h1>

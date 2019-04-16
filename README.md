@@ -71,3 +71,6 @@ We can use [ngValue] from [ngSelect] to save object in a select also instead of 
 
 ##21. Adding formControlName to radio buttons
 Note that better to replace name with formControlName or. Name and formControlName should be same.
+
+##22. Hiding the detailed feedback section if gender is male
+Use get handler to get any formcontrol value in HTML template
