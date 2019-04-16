@@ -1,7 +1,7 @@
 <form novalidate [formGroup]="feedbackForm" (ngSubmit)="submitFeedbackForm()">
   <section class="customer-name">
     <h1>Full Name</h1>
-    <input type="text" placeholder="Enter your name here">
+    <input type="text" placeholder="Enter your name here" formControlName="customerName">
   </section>
   <section class="gender">
     <h1>Gender</h1>

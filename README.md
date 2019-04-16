@@ -53,3 +53,6 @@ json pipe used to view HTML data for easier coding
 
 ## 15. Submit Feedback Form
 (ngSubmit)
+
+## 16. formControlName
+It links formcontrol created in ts with input file in html. This also takes care of two way binding of input.
