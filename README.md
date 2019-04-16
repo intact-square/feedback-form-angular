@@ -66,3 +66,5 @@ Adding/removing more feedbacks
 
 ## 19. Adding formControlName to select
 We can use [ngValue] from [ngSelect] to save object in a select also instead of just a string. Thus makes coding easier.
+
+## 20. Adding formControlName to textarea
