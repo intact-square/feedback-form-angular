@@ -19,11 +19,11 @@
   <section class="product-purchased">
     <h1>Product purchased</h1>
     <label>I own a:</label>
-    <select>
+    <select formControlName="productPurchased">
       <option value=""></option>
       <option value="Refrigerator">Refrigerator</option>
       <option value="Washing Machine">Washing Machine</option>
-      <option value="Telivision">Telivision</option>
+      <option [ngValue]="tvItem">Telivision</option>
     </select>
   </section>
   <section class="detailed-feedback">

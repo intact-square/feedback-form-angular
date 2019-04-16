@@ -21,13 +21,19 @@ export class FeedbackFormComponent implements OnInit {
     // customerNameControl.setValue('Kiran Kumar Dash', {emitEvent: true}); // value and trigger change event
   }
 
+  // Object selection item for select dropdowns
+  tvItem = {
+    brand: 'videocon',
+    color: 'blue'
+  };
+
   buildFeedbackForm() {
     // Building the Feedback Form Group
     this.feedbackForm = this.formBuilder.group({
       // customerName: new FormControl() // arguments: val, validator
       customerName: this.formBuilder.control(null), // same as above but expects null by default
-      productPurchased: this.formBuilder.control(null),
-      // productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
+      // productPurchased: this.formBuilder.control(null),
+      productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
       suggestions: this.formBuilder.control(null),
       delivery: this.formBuilder.group({
         delOnTime: this.formBuilder.control(null),

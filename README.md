@@ -63,3 +63,6 @@ It links formcontrol created in ts with input file in html. This also takes care
 Adding/removing more feedbacks
 
 ## 18. formGroupName and formControlName for nested form groups in checkboxes
+
+## 19. Adding formControlName to select
+We can use [ngValue] from [ngSelect] to save object in a select also instead of just a string. Thus makes coding easier.
