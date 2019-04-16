@@ -97,15 +97,15 @@
       </ul>
     </section>
   </section>
-  <section class="more-feedbacks">
+  <section class="more-feedbacks" formArrayName="morefeedbacks">
     <h1>More feedback?</h1>
     <ul>
-      <li>
-        <input type="text">
-        <button type="button" title="Delete Feedback">Delete</button>
+      <li *ngFor="let item of morefeedbacksControls.controls; let i = index">
+        <input type="text" formControlName="{{i}}">
+        <button type="button" title="Delete Feedback" (click)="deleteMoreFeedback(i)">Delete</button>
       </li>
     </ul>
-    <button type="button">Add a Feedback</button>
+    <button type="button" (click)="addMoreFeedback()">Add a Feedback</button>
   </section>
   <section>
     <h1>Any Suggestions?</h1>

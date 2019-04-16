@@ -56,3 +56,6 @@ json pipe used to view HTML data for easier coding
 
 ## 16. formControlName
 It links formcontrol created in ts with input file in html. This also takes care of two way binding of input.
+
+## 17. formArrayName and looping through form array controls
+Adding/removing more feedbacks
