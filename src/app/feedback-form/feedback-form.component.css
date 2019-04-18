@@ -91,6 +91,9 @@
     width: 100%;
     text-transform: uppercase;
   }
+  .customer-name input[type=text].ng-touched {
+    border: 4px solid grey;
+  }
   .welcome-back {
     color: #262223;
     background-color: rgba(188, 223, 138, 1);

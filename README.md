@@ -74,3 +74,9 @@ Note that better to replace name with formControlName or. Name and formControlNa
 
 ##22. Hiding the detailed feedback section if gender is male
 Use get handler to get any formcontrol value in HTML template
+
+##23. Change classes
+ng-untouched - if input has not been touched even once
+ng-touched - if input is once touched or focused
+ng-pristine - if input's value has not been changed even once
+ng-dirty - if input's value has changed atleast once
