@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 @Component({
@@ -33,7 +33,7 @@ export class FeedbackFormComponent implements OnInit {
     // Building the Feedback Form Group
     this.feedbackForm = this.formBuilder.group({
       // customerName: new FormControl() // arguments: val, validator
-      customerName: this.formBuilder.control(null), // same as above but expects null by default
+      customerName: this.formBuilder.control(null, Validators.required), // same as above but expects null by default
       // productPurchased: this.formBuilder.control(null),
       productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
       suggestions: this.formBuilder.control(null),

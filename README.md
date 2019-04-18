@@ -83,3 +83,5 @@ ng-dirty - if input's value has changed atleast once
 
 ## 24. Using valueChanges event to subscribe to change event of an input
 valueChanges.subscribe and .get() handler
+
+## 25. Using Validators
