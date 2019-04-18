@@ -34,7 +34,7 @@ export class FeedbackFormComponent implements OnInit {
     // Building the Feedback Form Group
     this.feedbackForm = this.formBuilder.group({
       // customerName: new FormControl() // arguments: val, validator
-      customerName: this.formBuilder.control(null, Validators.required), // same as above but expects null by default
+      customerName: this.formBuilder.control(null, [Validators.required, Validators.minLength(6)]), // same as above but expects null by default
       // productPurchased: this.formBuilder.control(null),
       productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
       suggestions: this.formBuilder.control(null),
@@ -70,7 +70,7 @@ export class FeedbackFormComponent implements OnInit {
 
     // Subscribe to valueChanges event for customer Name
     this.customerNameControl.valueChanges.subscribe(data => {
-      this.customerNameChanged = data && data.toUpperCase().trim() === "TEST";
+      this.customerNameChanged = data && data.toUpperCase().trim() === "TESTING";
     });
 
     

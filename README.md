@@ -87,3 +87,7 @@ valueChanges.subscribe and .get() handler
 ## 25. Using Validators
 
 ## 26. Validators.required with error message
+
+## 27. Array of validations
+Validators.required, Validators.minLength
+to get errors data: use the errors property from the formscontrol object
