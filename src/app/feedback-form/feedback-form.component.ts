@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 @Component({
   selector: 'app-feedback-form',
@@ -10,6 +11,7 @@ export class FeedbackFormComponent implements OnInit {
 
   feedbackForm: FormGroup; // Declaring a variable of type FormGroup
   morefeedbacksControls: FormArray;
+  customerNameChanged: boolean = false;
 
   constructor(private formBuilder: FormBuilder) { 
     this.buildFeedbackForm();
@@ -61,6 +63,11 @@ export class FeedbackFormComponent implements OnInit {
 
     // Building the FormArray Control
     this.morefeedbacksControls = this.feedbackForm.get('morefeedbacks') as FormArray;
+
+    // Subscribe to valueChanges event for customer Name
+    this.feedbackForm.get('customerName').valueChanges.subscribe(data => {
+      this.customerNameChanged = data && data.toUpperCase().trim() === "TEST";
+    });
   }
 
   addMoreFeedback() {

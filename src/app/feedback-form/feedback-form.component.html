@@ -2,6 +2,12 @@
   <section class="customer-name">
     <h1>Full Name</h1>
     <input type="text" placeholder="Enter your name here" formControlName="customerName">
+    <div *ngIf="customerNameChanged">
+      <i>Test</i> is not a valid name
+    </div>
+    <div *ngIf="!customerNameChanged && feedbackForm.get('customerName').value">
+      Welcome {{feedbackForm.get('customerName').value}}
+    </div>
   </section>
   <section class="gender">
     <h1>Gender</h1>

@@ -69,14 +69,17 @@ We can use [ngValue] from [ngSelect] to save object in a select also instead of 
 
 ## 20. Adding formControlName to textarea
 
-##21. Adding formControlName to radio buttons
+## 21. Adding formControlName to radio buttons
 Note that better to replace name with formControlName or. Name and formControlName should be same.
 
-##22. Hiding the detailed feedback section if gender is male
+## 22. Hiding the detailed feedback section if gender is male
 Use get handler to get any formcontrol value in HTML template
 
-##23. Change classes
+## 23. Change classes
 ng-untouched - if input has not been touched even once
 ng-touched - if input is once touched or focused
 ng-pristine - if input's value has not been changed even once
 ng-dirty - if input's value has changed atleast once
+
+## 24. Using valueChanges event to subscribe to change event of an input
+valueChanges.subscribe and .get() handler
