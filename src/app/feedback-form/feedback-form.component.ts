@@ -12,6 +12,7 @@ export class FeedbackFormComponent implements OnInit {
   feedbackForm: FormGroup; // Declaring a variable of type FormGroup
   morefeedbacksControls: FormArray;
   customerNameChanged: boolean = false;
+  customerNameControl;
 
   constructor(private formBuilder: FormBuilder) { 
     this.buildFeedbackForm();
@@ -64,10 +65,15 @@ export class FeedbackFormComponent implements OnInit {
     // Building the FormArray Control
     this.morefeedbacksControls = this.feedbackForm.get('morefeedbacks') as FormArray;
 
+    // Creating customer name control
+    this.customerNameControl = this.feedbackForm.get('customerName');
+
     // Subscribe to valueChanges event for customer Name
-    this.feedbackForm.get('customerName').valueChanges.subscribe(data => {
+    this.customerNameControl.valueChanges.subscribe(data => {
       this.customerNameChanged = data && data.toUpperCase().trim() === "TEST";
     });
+
+    
   }
 
   addMoreFeedback() {

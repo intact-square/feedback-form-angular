@@ -85,3 +85,5 @@ ng-dirty - if input's value has changed atleast once
 valueChanges.subscribe and .get() handler
 
 ## 25. Using Validators
+
+## 26. Validators.required with error message
