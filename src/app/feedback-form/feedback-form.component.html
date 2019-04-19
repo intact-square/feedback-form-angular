@@ -42,7 +42,7 @@
     </select>
   </section>
   <section class="detailed-feedback" *ngIf="feedbackForm.get('gender').value!='Male'">
-    <h1>Detailed Feedback</h1>
+    <h1>Detailed Feedback (Not for Male)</h1>
     <section>
       <h1>Product quality</h1>
       <ul>
@@ -131,7 +131,7 @@
     <h1>Any Suggestions?</h1>
     <textarea formControlName="suggestions"></textarea>
   </section>
-  <button type="submit">Submit Feedback</button>
+  <button type="submit" [disabled]='!feedbackForm.valid'>Submit Feedback</button>
   <button type="button" (click)="clearForm()">Clear Form</button>
 </form>
 

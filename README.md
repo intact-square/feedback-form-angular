@@ -94,3 +94,5 @@ to get errors data: use the errors property from the formscontrol object
 
 ## 28. Complex/Custom Validators
 Show error message if customer has a Washing Machine product and tries to choose Proper Installation option
+
+## 29. Disabling submit button if form is not valid
