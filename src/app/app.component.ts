@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Customer Feedback Form';
-  subtitle = 'With Reactive Forms in Angular 7 (BG WEB AGENCY)';
+  subtitle = 'With Reactive Forms in Angular (BG WEB AGENCY)';
 }

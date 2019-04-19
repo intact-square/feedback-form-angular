@@ -7,6 +7,8 @@ It has direct access to the data model of our form.
 The logic which we implement in model driven forms can be tested. And thus unit test can be done.
 Reactive forms are used to implement more advance forms. Template driven forms are mainly for simpler implementations.
 
+ng new feedback-form
+
 ## 2. Create a Form Component
 
 create a component: ng g c feedback-form

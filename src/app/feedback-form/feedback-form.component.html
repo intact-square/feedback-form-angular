@@ -41,8 +41,8 @@
       <option value="Old Washing Machine">Old Washing Machine</option>
     </select>
   </section>
-  <section class="detailed-feedback" *ngIf="feedbackForm.get('gender').value!='Male'">
-    <h1>Detailed Feedback (Not for Male)</h1>
+  <section class="detailed-feedback" *ngIf="feedbackForm.get('gender').value=='Female'">
+    <h1>Detailed Feedback (Only for Female)</h1>
     <section>
       <h1>Product quality</h1>
       <ul>
