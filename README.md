@@ -98,3 +98,7 @@ to get errors data: use the errors property from the formscontrol object
 Show error message if customer has a Washing Machine product and tries to choose Proper Installation option
 
 ## 29. Disabling submit button if form is not valid
+
+## 30. Build and move to server
+ng build
+change base href="/projects/ui/customer-feedback-form/"
