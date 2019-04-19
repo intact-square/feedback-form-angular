@@ -38,6 +38,7 @@
       <option value="Refrigerator">Refrigerator</option>
       <option value="Washing Machine">Washing Machine</option>
       <option [ngValue]="tvItem">Telivision</option>
+      <option value="Old Washing Machine">Old Washing Machine</option>
     </select>
   </section>
   <section class="detailed-feedback" *ngIf="feedbackForm.get('gender').value!='Male'">
@@ -58,6 +59,11 @@
           <label for="productQualityWorst">Worst</label>
         </li>
       </ul>
+      <div *ngIf="feedbackForm.errors" class="errors">
+        <div *ngIf="feedbackForm.errors.relationFail">
+          Can't give feedback<br> for old product.
+        </div>
+      </div>
     </section>
     <section formGroupName="delivery">
       <h1>Delivery</h1>

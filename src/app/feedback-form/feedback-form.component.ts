@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+
+import { ComplexValidators } from '../global/complex-validators';
 
 @Component({
   selector: 'app-feedback-form',
@@ -35,8 +36,8 @@ export class FeedbackFormComponent implements OnInit {
     this.feedbackForm = this.formBuilder.group({
       // customerName: new FormControl() // arguments: val, validator
       customerName: this.formBuilder.control(null, [Validators.required, Validators.minLength(6)]), // same as above but expects null by default
-      // productPurchased: this.formBuilder.control(null),
-      productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
+      productPurchased: this.formBuilder.control(null),
+      // productPurchased: this.formBuilder.control('Washing Machine'), // default value setting
       suggestions: this.formBuilder.control(null),
       delivery: this.formBuilder.group({
         delOnTime: this.formBuilder.control(null),
@@ -60,6 +61,9 @@ export class FeedbackFormComponent implements OnInit {
       morefeedbacks: this.formBuilder.array([
         this.formBuilder.control(null)
       ]) // Form array for dynamic form elements
+    },
+    {
+      validator: ComplexValidators.checkRelation('productPurchased', 'productQuality')
     }); // Form Builder uses a group of form controls to create a Form Group
 
     // Building the FormArray Control

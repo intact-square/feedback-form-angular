@@ -91,3 +91,6 @@ valueChanges.subscribe and .get() handler
 ## 27. Array of validations
 Validators.required, Validators.minLength
 to get errors data: use the errors property from the formscontrol object
+
+## 28. Complex/Custom Validators
+Show error message if customer has a Washing Machine product and tries to choose Proper Installation option
